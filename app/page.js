@@ -311,14 +311,7 @@
 
 
 
-// // "use client";
-// // import React, { useState, useEffect } from "react"; // Adjust path if needed
-// // import Image from "next/image";
-// // import HomePageHeader from "@/component/HomePageHeader";
-// // import { useRouter } from "next/navigation";
 
-// // // Replace with your actual image path
-// // import heroFurnitureImage from "../public/images/hygenicmealimage.webp";
 
 // // const HomePage = () => {
 // //   const router = useRouter();
