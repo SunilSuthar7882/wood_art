@@ -313,9 +313,6 @@
 
 
 
-// // const HomePage = () => {
-// //   const router = useRouter();
-// //   const [isScrolled, setIsScrolled] = useState(false);
 
 // //   // Track the scroll position to trigger the animation
 // //   useEffect(() => {
