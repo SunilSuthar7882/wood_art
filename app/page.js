@@ -313,9 +313,6 @@
 
 
 
-// // // Replace with your actual image path
-// // import heroFurnitureImage from "../public/images/hygenicmealimage.webp";
-
 // // const HomePage = () => {
 // //   const router = useRouter();
 // //   const [isScrolled, setIsScrolled] = useState(false);
