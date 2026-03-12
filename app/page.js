@@ -1404,7 +1404,6 @@ const HomePage = () => {
       }}
       className="rounded-2xl overflow-hidden"
     >
-      {/* Keeping the full image on the back so it looks like the card just flipped over */}
       <Image
         src={heroFurnitureImage} 
         alt="Back"
