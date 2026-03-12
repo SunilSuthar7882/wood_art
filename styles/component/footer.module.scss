@@ -1,0 +1,31 @@
+@use "../variables.scss" as *;
+
+.footerWrapper {
+  background-color: rgb(255, 255, 255);
+  // position: fixed;
+  bottom: 0;
+  width: 100%;
+  .footer {
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+  }
+  .copyRightContent {
+    font-weight: 600;
+    font-size: 16px;
+  }
+  .footerlinksWrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    .footerlinks {
+      color: $primary-color;
+      font-weight: 600;
+      font-size: 16px;
+    }
+  }
+}
+
+
+

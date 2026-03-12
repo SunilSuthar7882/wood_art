@@ -1,0 +1,163 @@
+// @use "../variables.scss";
+@use "../variables.scss" as *;
+
+.sidebarSection {
+  // padding: 0px 15px 15px 15px;
+  height: 100%;
+  // width: 250px;
+  background-color: $white;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #dddddd;
+
+  .sidebarLogo {
+    // margin: 10px 0px;
+    height: 100%;
+    
+  }
+
+  // .menuItem {
+  //   display: flex;
+  //   align-items: center;
+  //   padding: 10px 20px;
+  //   margin-bottom: 2px;
+  //   border-radius: 8px;
+  //   &:hover {
+  //     background-color: #ebebeb;
+  //   }
+
+  //   p {
+  //     font-weight: 500;
+  //     margin-left: 8px;
+  //     color: $font-grey;
+  //   }
+  // }
+
+
+
+
+
+  // .menuItemActive {
+  //   background-color: $primary-color;
+  //   &:hover {
+  //     background-color: $primary-color;
+  //   }
+
+  //   p {
+  //     color: $white;
+  //   }
+  // }
+  // #e6f4ea
+
+
+
+
+.menuItem {
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  margin-bottom: 8px;
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(14px) saturate(180%);
+  transition: all 0.4s ease;
+  cursor: pointer;
+
+  p {
+    font-weight: 500;
+    margin-left: 12px;
+    color: $font-grey;
+    position: relative;
+    z-index: 2;
+  }
+
+  svg {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -80%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(
+      120deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.7) 45%,
+      rgba(255, 255, 255, 0.9) 50%,
+      rgba(255, 255, 255, 0.7) 55%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-20deg);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+    filter: blur(3px);
+  }
+
+ &:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 10px -4px rgba(0, 0, 0, 0.25);
+  // blur: 10px, spread: -4px reduces side bleed
+
+  &::before {
+    opacity: 1;
+    animation: shine 0.9s ease-out;
+  }
+}
+
+}
+
+@keyframes shine {
+  0% {
+    left: -80%;
+  }
+  100% {
+    left: 130%;
+  }
+}
+
+
+
+
+
+
+
+ .menuItemActive {
+  background-color: #16a34a; // light green background (no gradient)
+  border-right: 3px solid #4caf50; // green right border
+  // border-radius: 999px; // full pill shape
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 1rem;
+
+  // &:hover {
+  //   background-color: #cafcd8;
+  // }
+  &:hover {
+    background-color: #ebeceb;
+    // color: black;
+    
+  }
+
+  p {
+    color: #2e7d32; // dark green text
+    font-weight: 400;
+    margin: 0;
+  }
+
+  svg {
+    // color: #2e7d32; // dark green icon
+    margin-right: 8px;
+  }
+}
+
+
+
+
+}

@@ -1,0 +1,27 @@
+@use "./variables";
+@use "./mixins.scss";
+
+.clientLayout {
+  flex: 1;
+  width: 100%;
+}
+
+.paginationWrapper {
+  position: relative;
+  width: 100%;
+  margin-right: -1px;
+  nav {
+    position: absolute;
+    background-color: #f4f5f8;
+    bottom: -3px;
+    right: -2px;
+    left: 0px;
+    z-index: 1150;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+}

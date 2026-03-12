@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+.signUpSection {
+  padding-top: 40px;
+  .brandLogoWrapper {
+    text-align: center;
+  }
+  .signUpContentWrapper {
+    text-align: center;
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 50px 80px 20px 80px;
+    margin-bottom: 85px;
+    .signUpHeading {
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .highlight {
+      font-weight: 700;
+    }
+    .signUpContent {
+      padding-top: 50px;
+      align-items: flex-end;
+
+      .qrCodeHeading {
+        font-size: 20px;
+        font-weight: 600;
+        margin-bottom: 10px;
+      }
+      .qrCode {
+        background-color: black;
+        border-radius: 8px;
+        padding: 15px;
+      }
+    }
+    .signUpInstructionwrapper {
+      padding-left: 20px;
+      margin-top: 0;
+      font-size: 18px;
+      font-weight: 500;
+
+      .signUpInstruction {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .downloadnAppWrapper {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 50px;
+      color: #cbcfe1;
+      .downloadnApp {
+        color: $primary-color;
+      }
+    }
+  }
+}

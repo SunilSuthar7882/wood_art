@@ -1,0 +1,46 @@
+@import "../variables.scss";
+
+.loginSection {
+  padding-top: 60px;
+  .brandLogoWrapper {
+    text-align: center;
+  }
+  .loginContentWrapper {
+    border: 1px solid $border-color;
+    border-radius: 4px;
+    background-color: $white;
+    padding: 80px 95px 20px 80px;
+    margin-bottom: 90px;
+    .loginHeading {
+      font-size: 28px;
+      font-weight: 500;
+    }
+    .highlight {
+      font-weight: 700;
+    }
+    .loginContent {
+      padding-top: 50px;
+    }
+    .loginInstructionwrapper {
+      padding-left: 20px;
+      margin-top: 0;
+      font-size: 18px;
+      font-weight: 500;
+
+      .loginInstruction {
+        font-size: 18px;
+        font-weight: 500;
+      }
+    }
+    .downloadnAppWrapper {
+      font-size: 16px;
+      font-weight: 600;
+      text-align: center;
+      margin-top: 50px;
+      color: #cbcfe1;
+      .downloadnApp {
+        color: $primary-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,37 @@
+"use client";
+
+import { API_ENDPOINTS } from "@/helpers/api-endpoints";
+import { HttpClient } from "@/helpers/clients/http-client";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useSnackbar } from "@/app/contexts/SnackbarContext";
+
+export function addCustomerBySuperadmin() {
+  const queryClient = useQueryClient();
+  const { showSnackbar } = useSnackbar();
+        
+          return useMutation({
+            mutationFn: async (payload) => {
+              try {
+                const { data } = await HttpClient.post(API_ENDPOINTS.ADD_CUSTOMER_BY_SUPERADMIN, payload);
+                return data;
+              } catch (err) {
+                const message =
+                  err.response?.data?.message ||
+                  err.response?.statusText ||
+                  err.message ||
+                  "An unknown error occurred";
+                throw new Error(message);
+              }
+            },
+        
+            onSuccess: () => {
+              queryClient.invalidateQueries(["customers"]);
+              showSnackbar("Email and Password sent to mail successfully!", "success");
+            },
+        
+            onError: (error) => {
+              console.error("Failed to add customer:", error);
+              showSnackbar(`Creation failed: ${error.message}`, "error");
+            },
+          });
+}

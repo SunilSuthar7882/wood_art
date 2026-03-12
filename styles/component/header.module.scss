@@ -1,0 +1,15 @@
+@use "../variables.scss";
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  color: black;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 76px;
+  border-bottom: 1px solid #dddddd;
+  text-transform: capitalize;
+}

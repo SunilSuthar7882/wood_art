@@ -1,0 +1,272 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+:root {
+  --font-montserrat: "Montserrat", "Open Sans", sans-serif !important;
+  --primary-color: #01933c;
+  --primary-hover: #1d7e33;
+  --background-color: #f8fafc;
+  --card-background: #ffffff;
+  --text-color: #1f2937;
+  --muted-text: #6b7280;
+  --border-color: #e5e7eb;
+  --shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --radius: 0.5rem;
+}
+
+@layer components {
+  .btn {
+    @apply font-normal py-2 px-4 rounded-lg flex items-center justify-center;
+  }
+  .btn-primary {
+    @apply bg-[var(--primary-color)] border-[1px] border-[var(--primary-color)] hover:bg-[var(--primary-hover)] hover:border-[var(--primary-hover)] text-white;
+    transition: var(--background-color) r 0.3s ease;
+  }
+  .btn-primary-outline {
+    @apply bg-transparent text-[var(--primary-color)] border-[1px] border-[var(--primary-color)] hover:bg-[var(--primary-color)] hover:text-slate-50 hover:border-[var(--primary-color)];
+    transition: var(--background-color) r 0.3s ease;
+  }
+  .input-label {
+    @apply block text-gray-700 text-sm font-semibold mb-2 ms-1;
+  }
+  .input-text {
+    @apply bg-transparent appearance-none border rounded-lg w-full py-3 px-3 text-gray-700 leading-tight;
+  }
+}
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 6px !important;
+  height: 6px !important;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px #c0c0c0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #c0c0c0;
+}
+
+
+/* react quill css */
+.custom-editor .ql-container {
+  height: 96px;
+  border-bottom-right-radius: 11px;
+  border-bottom-left-radius: 11px;
+}
+
+.custom-editor .ql-toolbar {
+  height: 41px;
+  border-top-left-radius: 11px;
+  border-top-right-radius: 11px;
+}
+/* body */
+a {
+  text-decoration: none;
+}
+
+.errorMessage {
+  color: red;
+  margin: 2px 0px 0px 3px;
+  font-size: 14px;
+}
+
+.select__control {
+  border-radius: 8px !important;
+  height: 45px !important;
+  border-color: #d3d3d3 !important;
+}
+.select__control:focus {
+  border-color: #e5e7eb !important;
+  box-shadow: none !important;
+}
+.select__control:hover {
+  border-color: #16a34a !important;
+  box-shadow: none !important;
+}
+.select__menu {
+  left: 2px !important;
+  width: 99.5% !important;
+  max-height: 168px !important;
+}
+.select__menu-list {
+  max-height: 168px !important;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+}
+
+.container {
+  padding: 2rem;
+  background: linear-gradient(to bottom right, #f8fafc, #f1f5f9);
+}
+
+.content {
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.calculator-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-background);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  transition: box-shadow 0.2s;
+  cursor: pointer;
+}
+
+.card:hover {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+.result-card {
+  background: var(--primary-hover);
+  padding: 1rem;
+  border-radius: var(--radius);
+  text-align: center;
+}
+
+.result-label {
+  color: white;
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.result-value {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.back-button {
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .calculator-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+
+.row-delete-warning {
+  background-color: #ffe5e5; /* Light red background */
+}
+
+.custom-delete-modal .MuiDialogActions-root button:last-of-type {
+  background-color: #dc2626 !important; /* red-600 */
+  color: #fff !important;
+}
+.custom-delete-modal .MuiDialogActions-root button:last-of-type:hover {
+  background-color: #b91c1c !important; /* red-700 */
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
