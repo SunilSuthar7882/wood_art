@@ -314,12 +314,7 @@
 
 
 
-// //   // Track the scroll position to trigger the animation
-// //   useEffect(() => {
-// //     const handleScroll = () => {
-// //       // Trigger the flip and move when scrolled down 100px
-// //       setIsScrolled(window.scrollY > 100);
-// //     };
+
 
 // //     window.addEventListener("scroll", handleScroll);
 // //     return () => window.removeEventListener("scroll", handleScroll);
